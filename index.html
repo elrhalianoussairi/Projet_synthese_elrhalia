@@ -14,23 +14,41 @@
     <link rel="stylesheet" href="styles/contenu.css">
     <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
+
 <body>
-    <!-- En-tête du site -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#apropos">À propos</a></li>
-                <li><a href="#services">Espaces a louer </a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" aria-label="Maison Mère - Retour à l'accueil">
+                <i class="bi bi-house-door-fill me-2 d-none d-sm-inline" aria-hidden="true"></i>
+                <span class="d-none d-md-inline">Maison Mère</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Ouvrir le menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html" aria-current="page">Accueil</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="apropos.html">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="espacesalouer.html">Espaces à louer</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <!-- Contenu principal -->
     <main>
-      
+
     </main>
+
+
+
 
     <!-- Pied de page -->
     <footer>
@@ -39,4 +57,5 @@
 
 
 </body>
+
 </html>
