@@ -63,7 +63,7 @@ p {
     font-size: 20px;
     line-height: 1.6;
     margin-bottom: 1rem;
-    color: var(--noir);
+    color: var(--blanc);
 }
 /* Navigation */
 .navbar {
@@ -137,6 +137,7 @@ p {
 }
 
 .footer-title::after {
+      color: var(--blanc);
     content: '';
     position: absolute;
     bottom: 0;
@@ -147,6 +148,52 @@ p {
     border-radius: 2px;
 }
 
+/* Bas du footer */
+.footer-bottom {
+    border-top: 2px solid var(--vert); /* Trait vert */
+    padding-top: 20px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.footer-bottom-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-bottom p {
+    color: var(--gris-clair);
+    margin: 0;
+    text-align: center;
+}
+
+/* Newsletter */
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.newsletter-input {
+    flex: 1;
+    padding: 10px 12px;
+    border: 1px solid var(--gris-moyen);
+    background-color: var(--gris-fonce);
+    color: var(--blanc);
+    border-radius: 4px;
+    min-width: 0;
+}
+
+.newsletter-input::placeholder {
+    color: var(--gris-clair);
+}
+
+.newsletter-input:focus {
+    outline: none;
+    border-color: var(--vert);
+    background-color: var(--gris-fonce);
+}
 /* Partenaires dans le footer */
 .partenaires-mini {
     margin-top: 10px;
@@ -170,6 +217,28 @@ p {
 
 .partenaire-logo:hover {
     transform: scale(1.1);
+}
+
+/* Liens légaux */
+.footer-legal {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.footer-legal a {
+    color: var(--gris-clair);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-legal a:hover,
+.footer-legal a:focus {
+    color: var(--beige);
+    text-decoration: underline;
 }
 
 
