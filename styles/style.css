@@ -1,0 +1,243 @@
+/* Variables CSS - Palette Maison Mère */
+:root {
+    --noir: #1e1e1e;
+    --blanc: #ffffff;
+    --gris-fonce: #2f2f2f;
+    --gris-moyen: #666666;
+    --gris-clair: #f2f2f2;
+    
+    --vert: #18612a;
+    --beige: #c9b88c;
+    --brun: #7a6a52;
+    --bleu-gris: #aab9b9;
+    
+    --ombre-legere: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --ombre-medium: 0 8px 15px rgba(0, 0, 0, 0.15);
+
+}
+body {
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 400; /* Regular */
+    background-color: var(--blanc);
+    color: var(--noir);
+    line-height: 1.6;
+    padding-top: 76px;
+}
+
+/* Typographie - Styles pour les titres */
+h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900; /* Black */
+    font-size: 64px;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900; /* Black */
+    font-size: 32px;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900; /* Black */
+    font-size: 24px;
+    line-height: 1.4;
+    margin-bottom: 0.75rem;
+}
+
+h4 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900; /* Black */
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 0.75rem;
+}
+/* Styles pour les paragraphes */
+p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400; /* Regular */
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: var(--blanc);
+}
+/* Navigation */
+.navbar {
+    background-color: var(--gris-fonce);
+    border-bottom: 2px solid var(--vert);
+    box-shadow: var(--ombre-legere);
+}
+
+.navbar-brand, .nav-link {
+    color: var(--blanc) !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--beige) !important;
+}
+
+.navbar-toggler {
+    border-color: var(--vert);
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 2px var(--vert);
+}
+
+/* Icône maison */
+.navbar-brand .bi-house-door-fill {
+    color: var(--vert);
+    font-size: 1.6rem;
+}
+
+.navbar-brand .d-inline.d-sm-none {
+    font-size: 1.4rem;
+}
+
+
+/* ===== FOOTER ===== */
+
+.footer-patrimoine {
+    background-color: var(--gris-fonce);
+    color: var(--blanc);
+    padding: 60px 0 30px;
+    border-top: 3px solid var(--vert);
+}
+
+.footer-section {
+    margin-bottom: 30px;
+    position: relative;
+}
+/* Styles pour les titres avec traits verts */
+.footer-title {
+    color: var(--blanc);
+    font-weight: 600;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    display: inline-block;
+    width: 65%;
+}
+
+.footer-title::after {
+      color: var(--blanc);
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--vert);
+    border-radius: 2px;
+}
+
+/* Bas du footer */
+.footer-bottom {
+    border-top: 2px solid var(--vert); /* Trait vert */
+    padding-top: 20px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.footer-bottom-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-bottom p {
+    color: var(--gris-clair);
+    margin: 0;
+    text-align: center;
+}
+
+/* Newsletter */
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.newsletter-input {
+    flex: 1;
+    padding: 10px 12px;
+    border: 1px solid var(--gris-moyen);
+    background-color: var(--gris-fonce);
+    color: var(--blanc);
+    border-radius: 4px;
+    min-width: 0;
+}
+
+.newsletter-input::placeholder {
+    color: var(--gris-clair);
+}
+
+.newsletter-input:focus {
+    outline: none;
+    border-color: var(--vert);
+    background-color: var(--gris-fonce);
+}
+/* Partenaires dans le footer */
+.partenaires-mini {
+    margin-top: 10px;
+}
+
+.partenaires-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+}
+
+.partenaire-logo {
+    max-width: 60px;
+    height: auto;
+    transition: transform 0.3s ease;
+    border-radius: 4px;
+}
+
+.partenaire-logo:hover {
+    transform: scale(1.1);
+}
+
+/* Liens légaux */
+.footer-legal {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.footer-legal a {
+    color: var(--gris-clair);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-legal a:hover,
+.footer-legal a:focus {
+    color: var(--beige);
+    text-decoration: underline;
+}
+
