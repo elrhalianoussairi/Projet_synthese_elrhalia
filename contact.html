@@ -41,20 +41,17 @@
             </div>
         </div>
     </nav>
+
     <!-- Hero Section -->
     <section class="hero-section" aria-labelledby="hero-title">
-        <div class="container text-center">
+        <div class="container">
             <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <h1 id="hero-title" class="display-4 mb-4">Bienvenue à Maison Mère</h1>
-                    <p class="lead mb-4">
-                        Un lieu patrimonial d'exception où passé et avenir s'unissent pour faire vivre la culture,
-                        l'innovation et la mémoire de Charlevoix.
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 id="hero-title" class="display-4 mb-4">Contactez-nous</h1>
+                    <p class="lead mb-4">L’équipe de Maison Mère est à votre écoute pour toute demande d’information ou
+                        de location d’espaces.
+
                     </p>
-                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
-                        <a href="apropos.html" class="btn btn-patrimoine btn-lg">Découvrir notre histoire</a>
-                        <a href="contact.html" class="btn btn-outline-patrimoine btn-lg">Nous contacter</a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -62,11 +59,119 @@
 
 
     <!-- Contenu principal -->
-    <main>
+    <main id="main-content">
+
+        <!-- Section Contact -->
+        <section class="section-patrimoine" aria-labelledby="contact-title">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h2 id="contact-title" class="section-title text-center">Prenez Rendez-vous</h2>
+                        <p class="text-center mb-5">
+                            Que ce soit pour une visite, une location d'espace ou une simple question, n'hésitez pas à
+                            nous
+                            contacter. Notre équipe vous répondra dans les plus brefs délais.
+                        </p>
+
+                        <!-- Formulaire de Contact -->
+                        <form id="contactForm" class="needs-validation" aria-labelledby="contact-title">
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="nom" class="form-label">Nom *</label>
+                                    <input type="text" class="form-control" id="nom" required pattern=".{2,}"
+                                        oninput="this.classList.toggle('is-invalid', !this.checkValidity())">
+                                    <div class="invalid-feedback">
+                                        Veuillez renseigner votre nom (au moins 2 caractères).
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label for="prenom" class="form-label">Prénom *</label>
+                                    <input type="text" class="form-control" id="prenom" required pattern=".{2,}"
+                                        oninput="this.classList.toggle('is-invalid', !this.checkValidity())">
+                                    <div class="invalid-feedback">
+                                        Veuillez renseigner votre prénom (au moins 2 caractères).
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">Email *</label>
+                                    <input type="email" class="form-control" id="email" required
+                                        oninput="this.classList.toggle('is-invalid', !this.checkValidity())">
+                                    <div class="invalid-feedback">
+                                        Veuillez renseigner un email valide.
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label for="telephone" class="form-label">Téléphone</label>
+                                    <input type="tel" class="form-control" id="telephone"
+                                        pattern="[0-9\s\-\.\(\)]{10,}|^$"
+                                        oninput="this.classList.toggle('is-invalid', !this.checkValidity())"
+                                        aria-describedby="telephoneHelp">
+                                    <div id="telephoneHelp" class="form-text">
+                                        Facultatif, mais recommandé pour un contact rapide
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Veuillez renseigner un numéro de téléphone valide (10 chiffres minimum).
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="sujet" class="form-label">Sujet *</label>
+                                <select class="form-select" id="sujet" required
+                                    onchange="this.classList.toggle('is-invalid', !this.checkValidity())">
+                                    <option value="">Choisissez un sujet</option>
+                                    <option value="visite">Visite du patrimoine</option>
+                                    <option value="location-chapelle">Location chapelle</option>
+                                    <option value="location-bureaux">Location bureaux</option>
+                                    <option value="location-salles">Location salles</option>
+                                    <option value="evenement">Organisation d'événement</option>
+                                    <option value="partenariat">Demande de partenariat</option>
+                                    <option value="autre">Autre demande</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Veuillez sélectionner un sujet.
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message *</label>
+                                <textarea class="form-control" id="message" rows="5" required pattern=".{10,}"
+                                    oninput="this.classList.toggle('is-invalid', !this.checkValidity())"
+                                    placeholder="Décrivez-nous votre projet ou votre demande..."></textarea>
+                                <div class="invalid-feedback">
+                                    Veuillez écrire votre message (au moins 10 caractères).
+                                </div>
+                            </div>
+
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="newsletter">
+                                <label class="form-check-label" for="newsletter">
+                                    Je souhaite m'abonner à la newsletter de Maison Mère
+                                </label>
+                            </div>
+
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-patrimoine btn-lg">
+                                    Envoyer le message
+                                </button>
+                            </div>
+
+                        </form>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
-
-
 
 
     <!-- Footer -->
