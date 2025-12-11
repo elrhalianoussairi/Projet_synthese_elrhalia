@@ -17,3 +17,53 @@
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
+/* États de validation formulaire */
+.was-validated .form-control:valid {
+    border-color: var(--vert);
+}
+
+.was-validated .form-control:invalid {
+    border-color: #dc3545;
+}
+/* Cartes */
+.card-patrimoine {
+    border: 1px solid var(--gris-clair);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background-color: var(--blanc);
+    height: 100%;
+}
+
+.card-patrimoine:hover,
+.card-patrimoine:focus-within {
+    transform: translateY(-5px);
+    box-shadow: var(--ombre-medium);
+    border-color: var(--vert);
+}
+
+/* Accordéon */
+.accordion-button {
+    background-color: var(--blanc);
+    color: var(--noir);
+    font-weight: bold;
+    border: 1px solid var(--gris-clair);
+    padding: 1rem 1.25rem;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--vert);
+    color: var(--blanc);
+    border-color: var(--vert);
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.2rem rgba(24, 97, 42, 0.25);
+    border-color: var(--vert);
+}
+
+.accordion-body {
+    background-color: var(--blanc);
+    border: 1px solid var(--gris-clair);
+    border-top: none;
+    padding: 1.5rem;
+}
