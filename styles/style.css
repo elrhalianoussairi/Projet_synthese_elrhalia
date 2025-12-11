@@ -149,7 +149,25 @@ p {
     color: var(--blanc);
 }
 
+/* Carousel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--vert);
+    border-radius: 50%;
+    padding: 12px;
+}
 
+.carousel-indicators button {
+    background-color: var(--gris-moyen);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 4px;
+}
+
+.carousel-indicators button.active {
+    background-color: var(--vert);
+}
 
 /* Formulaire */
 .form-control {
