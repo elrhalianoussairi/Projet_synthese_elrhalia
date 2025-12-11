@@ -1,3 +1,5 @@
+/* Import de la police Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
 /* Variables CSS - Palette Maison Mère */
 :root {
     --noir: #1e1e1e;
@@ -109,6 +111,44 @@ p {
 .navbar-brand .d-inline.d-sm-none {
     font-size: 1.4rem;
 }
+/* Boutons */
+.btn-patrimoine {
+    background-color: var(--vert);
+    border-color: var(--vert);
+    color: var(--blanc);
+    padding: 12px 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-patrimoine:hover,
+.btn-patrimoine:focus {
+    background-color: var(--brun);
+    border-color: var(--brun);
+    color: var(--blanc);
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.btn-outline-patrimoine {
+    background-color: transparent;
+    border: 2px solid var(--vert);
+    color: var(--vert);
+    padding: 10px 28px;
+}
+
+.btn-outline-patrimoine:hover,
+.btn-outline-patrimoine:focus {
+    background-color: var(--vert);
+    border-color: var(--vert);
+    color: var(--blanc);
+}
+
 
 
 /* Formulaire */
