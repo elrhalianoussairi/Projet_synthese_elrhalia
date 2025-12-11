@@ -16,13 +16,16 @@
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html" aria-label="Maison Mère - Retour à l'accueil">
                 <i class="bi bi-house-door-fill me-2 d-none d-sm-inline" aria-hidden="true"></i>
+                <i class="bi bi-house-door-fill me-1 d-inline d-sm-none" aria-hidden="true"></i>
                 <span class="d-none d-md-inline">Maison Mère</span>
+                <span class="d-inline d-md-none">M. Mère</span>
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -41,6 +44,7 @@
             </div>
         </div>
     </nav>
+
     <!-- Hero Section -->
     <section class="hero-section" aria-labelledby="hero-title">
         <div class="container text-center">
@@ -48,7 +52,9 @@
             <p class="lead mb-4">Découvrez l’histoire et la mission de notre lieu patrimonial unique</p>
         </div>
     </section>
+
     <main id="main-content">
+       
 
         <!-- Section Histoire -->
         <section class="section-patrimoine" aria-labelledby="histoire-title">
@@ -84,6 +90,7 @@
                 </div>
             </div>
         </section>
+
         <!-- Section Chronologie -->
         <section class="section-patrimoine bg-light" aria-labelledby="chronologie-title">
             <div class="container">
@@ -177,96 +184,74 @@
                 </div>
             </div>
         </section>
-
-
     </main>
 
-
     <!-- Footer -->
-
     <footer class="footer-patrimoine">
         <div class="container">
             <div class="row">
-                <!-- Colonne 1 - Navigation -->
+                <!-- Navigation -->
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="footer-section">
-                        <h5 class="footer-title">Navigation</h5>
-                        <ul class="footer-links">
-                            <li><a href="index.html">Accueil</a></li>
-                            <li><a href="apropos.html">À propos</a></li>
-                            <li><a href="espacesalouer.html">Espaces à louer</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
+                    <h5 class="footer-title">Navigation</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="apropos.html">À propos</a></li>
+                        <li><a href="espacesalouer.html">Espaces à louer</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
                 </div>
-                <!-- Colonne 2 - Partenaires -->
+
+                <!-- Partenaires -->
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="footer-section">
-                        <h5 class="footer-title">Partenaires</h5>
-                        <div class="partenaires-mini">
-                            <div class="partenaires-logos">
-                                <img src="images/logo1.png" alt="Partenaire Culture" class="partenaire-logo">
-                                <img src="images/logo2.png" alt="Partenaire Patrimoine" class="partenaire-logo">
-                                <img src="images/logo3.jpg" alt="Partenaire Événementiel" class="partenaire-logo">
-                            </div>
-                            <a href="#" class="btn btn-outline-patrimoine btn-sm mt-3 d-inline-block">Tous nos
-                                partenaires</a>
-                        </div>
+                    <h5 class="footer-title">Partenaires</h5>
+                    <div class="partenaires-mini">
+                        <img src="images/logo1.png" alt="Partenaire Culture" class="partenaire-logo">
+                        <img src="images/logo2.png" alt="Partenaire Patrimoine" class="partenaire-logo">
+                        <img src="images/logo3.jpg" alt="Partenaire Événementiel" class="partenaire-logo">
                     </div>
+                    <a href="#" class="btn btn-outline-patrimoine btn-sm mt-3">Tous nos partenaires</a>
                 </div>
-                <!-- Colonne 3 - Contact -->
+
+                <!-- Contact -->
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="footer-section">
-                        <h5 class="footer-title">Contact</h5>
-                        <div class="footer-contact">
-                            <p>📍 63, rue Ambroise-Fafard<br>Baie-Saint-Paul (Québec) G3Z 2J7</p>
-                            <p>📞 418 435-6833</p>
-                            <p>✉️ info@maisonmere.ca</p>
-                        </div>
+                    <h5 class="footer-title">Contact</h5>
+                    <p>📍 63 rue Ambroise-Fafard<br>Baie-Saint-Paul (QC) G3Z 2J7</p>
+                    <p>📞 418 435-3521</p>
+                    <p>✉️ info@maisonmere.ca</p>
+                </div>
+
+                <!-- Réseaux -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="footer-title">Suivez-nous</h5>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/maisonmerebsp" class="social-link" aria-label="Facebook"
+                            target="_blank">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/maisonmerebsp" class="social-link" aria-label="Instagram"
+                            target="_blank">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+
                     </div>
-                </div>
-                <!-- Colonne 4 - Réseaux sociaux & Newsletter -->
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="footer-section">
-                        <h5 class="footer-title">Suivez-nous</h5>
-
-                        <!-- Réseaux sociaux -->
-                        <div class="social-links">
-                            <a href="https://www.facebook.com/maisonmerebsp" class="social-link" aria-label="Facebook"
-                                target="_blank">
-                                <i class="bi bi-facebook"></i>
-                            </a>
-                            <a href="https://www.instagram.com/maisonmerebsp" class="social-link" aria-label="Instagram"
-                                target="_blank">
-                                <i class="bi bi-instagram"></i>
-                            </a>
-
-                        </div>
-
-                        <!-- Newsletter -->
-                        <div class="newsletter mt-4">
-                            <h6 class="footer-subtitle">Newsletter</h6>
-                            <p class="small">Recevez nos actualités</p>
-                            <form class="newsletter-form mt-2">
-                                <input type="email" class="newsletter-input" placeholder="Votre email" required>
-                                <button type="submit" class="btn btn-patrimoine btn-sm">OK</button>
-                            </form>
-                        </div>
+                    <div class="newsletter mt-4">
+                        <h6 class="footer-subtitle">Newsletter</h6>
+                        <p class="small">Recevez nos actualités</p>
+                        <form class="newsletter-form mt-2">
+                            <input type="email" class="newsletter-input" placeholder="Votre email" required>
+                            <button type="submit" class="btn btn-patrimoine btn-sm">OK</button>
+                        </form>
                     </div>
                 </div>
             </div>
-            <!-- Bas du footer -->
-            <div class="footer-bottom">
-                <div class="container">
-                    <div class="footer-bottom-content">
-                        <p class="mb-0">&copy; 2025 Maison Mère Baie-Saint-Paul Tous droits réservés.</p>
-                    </div>
-                </div>
+
+            <div class="footer-bottom text-center mt-4">
+                <p class="mb-0">&copy; 2025 Maison Mère Baie-Saint-Paul — Tous droits réservés.</p>
             </div>
         </div>
     </footer>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
