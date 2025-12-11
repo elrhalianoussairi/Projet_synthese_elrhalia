@@ -63,6 +63,7 @@ p {
     font-size: 20px;
     line-height: 1.6;
     margin-bottom: 1rem;
+   
     color: var(--noir);
 }
 /* Navigation */
@@ -108,6 +109,7 @@ p {
 .navbar-brand .d-inline.d-sm-none {
     font-size: 1.4rem;
 }
+
 
 /* Formulaire */
 .form-control {
@@ -264,4 +266,5 @@ p {
     color: var(--beige);
     text-decoration: underline;
 }
+
 

@@ -16,6 +16,7 @@
     margin-bottom: 1.5rem;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
+
 /* États de validation formulaire */
 .was-validated .form-control:valid {
     border-color: var(--vert);

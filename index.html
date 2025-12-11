@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Maison Mère Baie-Saint-Paul</title>
+    <meta name="description"
+        content="Maison Mère Baie-Saint-Paul — Un lieu patrimonial d'exception où histoire, culture et innovation se rencontrent au cœur de Charlevoix.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/contenu.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" aria-label="Maison Mère - Retour à l'accueil">
+                <i class="bi bi-house-door-fill me-2 d-none d-sm-inline" aria-hidden="true"></i>
+                <span class="d-none d-md-inline">Maison Mère</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Ouvrir le menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html" aria-current="page">Accueil</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="apropos.html">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="espacesalouer.html">Espaces à louer</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="hero-section" aria-labelledby="hero-title">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h1 id="hero-title" class="display-4 mb-4">Bienvenue à Maison Mère</h1>
+                    <p class="lead mb-4">
+                        Un lieu patrimonial d'exception où passé et avenir s'unissent pour faire vivre la culture,
+                        l'innovation et la mémoire de Charlevoix.
+                    </p>
+                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                        <a href="apropos.html" class="btn btn-patrimoine btn-lg">Découvrir notre histoire</a>
+                        <a href="contact.html" class="btn btn-outline-patrimoine btn-lg">Nous contacter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contenu principal -->
+    <main id="main-content">
+        <!-- Section Présentation avec Carousel -->
+        <section class="section-patrimoine" aria-labelledby="presentation-title">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h2 id="presentation-title" class="section-title">Un Lieu Chargé d'Histoire</h2>
+                        <p class="lead">
+                            Maison Mère Baie-Saint-Paul est un lieu emblématique du patrimoine québécois, autrefois le
+                            couvent des Petites Franciscaines de Marie.
+                        </p>
+                        <p>
+                            Érigé à la fin du XIX<sup>e</sup> siècle, ce bâtiment a longtemps été un centre d'éducation,
+                            de soins et de vie communautaire.
+                            Aujourd'hui, il s'impose comme un pôle d'innovation, d'entrepreneuriat et de culture au cœur
+                            de Charlevoix.
+                        </p>
+                        <p>
+                            Maison Mère accueille des entreprises créatives, des artistes, des visiteurs et des
+                            événements,
+                            tout en préservant l'esprit de solidarité et de partage qui anime ce lieu depuis plus de 130
+                            ans.
+                        </p>
+                        <a href="apropos.html" class="btn btn-patrimoine mt-2">En savoir plus</a>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div id="presentationCarousel" class="carousel slide carousel-presentation"
+                            data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#presentationCarousel" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#presentationCarousel" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#presentationCarousel" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner rounded shadow">
+                                <div class="carousel-item active">
+                                    <img src="images/maison.jpg" class="d-block w-100 carousel-image"
+                                        alt="Façade principale de Maison Mère Baie-Saint-Paul">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <p>Façade historique du bâtiment</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/maisonmere.jpg" class="d-block w-100 carousel-image"
+                                        alt="Intérieur historique de Maison Mère">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <p>Intérieur patrimonial préservé</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/EXTEMAISON.jpg" class="d-block w-100 carousel-image"
+                                        alt="La chapelle restaurée de Maison Mère">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <p>La chapelle, espace d'exception</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#presentationCarousel"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Précédent</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#presentationCarousel"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Suivant</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section Espaces -->
+        <section class="section-patrimoine bg-light" aria-labelledby="espaces-title">
+            <div class="container">
+                <h2 id="espaces-title" class="section-title text-center">Nos Espaces d'Exception</h2>
+                <p class="text-center mb-5">Des lieux patrimoniaux réinventés pour accueillir vos projets, vos
+                    événements et vos inspirations.</p>
+
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card card-patrimoine h-100 text-center">
+                            <div class="card-body">
+                                <i class="bi bi-bank display-4 text-beige" aria-hidden="true"></i>
+                                <h3 class="card-title h5">La Chapelle</h3>
+                                <p class="card-text">Un espace majestueux et lumineux, idéal pour les concerts,
+                                    mariages, expositions et célébrations culturelles.</p>
+                                <a href="espacesalouer.html#chapelle" class="btn btn-patrimoine">Découvrir</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4">
+                        <div class="card card-patrimoine h-100 text-center">
+                            <div class="card-body">
+                                <i class="bi bi-briefcase-fill display-4 text-beige" aria-hidden="true"></i>
+                                <h3 class="card-title h5">Les Bureaux</h3>
+                                <p class="card-text">Des espaces de travail modernes et flexibles, parfaits pour les
+                                    entreprises, organismes et créateurs de la région.</p>
+                                <a href="espacesalouer.html#bureaux" class="btn btn-patrimoine">Découvrir</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4">
+                        <div class="card card-patrimoine h-100 text-center">
+                            <div class="card-body">
+                                <i class="bi bi-door-open-fill display-4 text-beige" aria-hidden="true"></i>
+                                <h3 class="card-title h5">Les Salles</h3>
+                                <p class="card-text">Des salles polyvalentes adaptées pour les conférences, séminaires,
+                                    ateliers et événements corporatifs.</p>
+                                <a href="espacesalouer.html#salles" class="btn btn-patrimoine">Découvrir</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+
+
+    <!-- Footer -->
+
+    <footer class="footer-patrimoine">
+        <div class="container">
+            <div class="row">
+                <!-- Colonne 1 - Navigation -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h5 class="footer-title">Navigation</h5>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="apropos.html">À propos</a></li>
+                            <li><a href="espacesalouer.html">Espaces à louer</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Colonne 2 - Partenaires -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h5 class="footer-title">Partenaires</h5>
+                        <div class="partenaires-mini">
+                            <div class="partenaires-logos">
+                                <img src="images/logo1.png" alt="Partenaire Culture" class="partenaire-logo">
+                                <img src="images/logo2.png" alt="Partenaire Patrimoine" class="partenaire-logo">
+                                <img src="images/logo3.jpg" alt="Partenaire Événementiel" class="partenaire-logo">
+                            </div>
+                            <a href="#" class="btn btn-outline-patrimoine btn-sm mt-3 d-inline-block">Tous nos
+                                partenaires</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Colonne 3 - Contact -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h5 class="footer-title">Contact</h5>
+                        <div class="footer-contact">
+                            <p>📍 63, rue Ambroise-Fafard<br>Baie-Saint-Paul (Québec) G3Z 2J7</p>
+                            <p>📞 418 435-6833</p>
+                            <p>✉️ info@maisonmere.ca</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Colonne 4 - Réseaux sociaux & Newsletter -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h5 class="footer-title">Suivez-nous</h5>
+
+                        <!-- Réseaux sociaux -->
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/maisonmerebsp" class="social-link" aria-label="Facebook"
+                                target="_blank">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                            <a href="https://www.instagram.com/maisonmerebsp" class="social-link" aria-label="Instagram"
+                                target="_blank">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+
+                        </div>
+
+                        <!-- Newsletter -->
+                        <div class="newsletter mt-4">
+                            <h6 class="footer-subtitle">Newsletter</h6>
+                            <p class="small">Recevez nos actualités</p>
+                            <form class="newsletter-form mt-2">
+                                <input type="email" class="newsletter-input" placeholder="Votre email" required>
+                                <button type="submit" class="btn btn-patrimoine btn-sm">OK</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Bas du footer -->
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="footer-bottom-content">
+                        <p class="mb-0">&copy; 2025 Maison Mère Baie-Saint-Paul Tous droits réservés.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
