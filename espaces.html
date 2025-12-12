@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil - Maison Mère Baie-Saint-Paul</title>
+    <title>Espaces - Maison Mère Baie-Saint-Paul</title>
     <meta name="description"
         content="Maison Mère Baie-Saint-Paul — Un lieu patrimonial d'exception où histoire, culture et innovation se rencontrent au cœur de Charlevoix.">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
@@ -47,15 +47,236 @@
 
     <!-- Hero Section -->
     <section class="hero-section" aria-labelledby="hero-title">
-        <div class="container text-center">
-            <h1 id="hero-title" class="display-4 mb-4">À propos de Maison Mère</h1>
-            <p class="lead mb-4">Découvrez l’histoire et la mission de notre lieu patrimonial unique</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 id="hero-title" class="display-4 mb-4">Nos Espaces à Louer</h1>
+                    <p class="lead mb-4">Des lieux chargés d'histoire pour vos événements mémorables</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <main id="main-content">
-       
+     <main id="main-content">
+        
+        <!-- Section Accordéon -->
+        <section class="section-patrimoine" aria-labelledby="espaces-title">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h2 id="espaces-title" class="section-title text-center">Découvrez nos Espaces à louer</h2>
+                        <p class="text-center mb-5">
+                            Chaque espace de Maison Mère offre une atmosphère unique : patrimoine historique,
+                            architecture chargée d’histoire et installations modernes pour vos événements, votre travail
+                            ou vos réunions.
+                        </p>
 
+                        <div class="accordion" id="espacesAccordion">
+                            <!-- Chapelle -->
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#chapelle" aria-expanded="true" aria-controls="chapelle">
+                                        <i class="bi bi-house-door-fill me-3" aria-hidden="true"></i>La Chapelle
+                                    </button>
+                                </h3>
+                                <div id="chapelle" class="accordion-collapse collapse show"
+                                    data-bs-parent="#espacesAccordion">
+                                    <div class="accordion-body">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <img src="images/Chapelle.jpg"
+                                                    alt="Intérieur de la Chapelle de Maison Mère à Baie-Saint-Paul"
+                                                    class="img-fluid rounded mb-3">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h4>La Chapelle de l’ancien couvent</h4>
+                                                <p>
+                                                    Véritable joyau du patrimoine religieux de Charlevoix, la chapelle
+                                                    de Maison Mère offre un cadre exceptionnel pour vos événements.
+                                                    Lumineuse et chargée d’histoire, elle conserve son orgue Casavant,
+                                                    ses vitraux d’époque et son atmosphère empreinte de sérénité.
+                                                </p>
+                                                <ul class="mb-3">
+                                                    <li><strong>Capacité :</strong> 150 personnes assises</li>
+                                                    <li><strong>Surface :</strong> environ 180 m²</li>
+                                                    <li><strong>Équipements :</strong> Orgue Casavant, sonorisation,
+                                                        éclairage scénique, accès PMR</li>
+                                                    <li><strong>Usage :</strong> Concerts, mariages, conférences,
+                                                        expositions culturelles</li>
+                                                </ul>
+                                                <div class="d-grid gap-2 d-md-flex">
+                                                    <a href="chapelle.html" class="btn btn-patrimoine flex-fill">Voir
+                                                        les détails</a>
+                                                    <a href="contact.html"
+                                                        class="btn btn-outline-patrimoine flex-fill">Demander un
+                                                        devis</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Bureaux -->
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#bureaux" aria-expanded="false" aria-controls="bureaux">
+                                        <i class="bi bi-briefcase-fill me-3" aria-hidden="true"></i>Les Bureaux
+                                    </button>
+                                </h3>
+                                <div id="bureaux" class="accordion-collapse collapse"
+                                    data-bs-parent="#espacesAccordion">
+                                    <div class="accordion-body">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <img src="images/bureau.jpg"
+                                                    alt="Espace de bureaux modernes Maison Mère"
+                                                    class="img-fluid rounded mb-3">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h4>Espace de travail patrimonial</h4>
+                                                <p>
+                                                    Des bureaux convertis dans l’ancien couvent des Petites
+                                                    Franciscaines de Marie, alliant architecture historique et
+                                                    équipements modernes. Parfait pour les entrepreneurs, équipes
+                                                    créatives et organisations.
+                                                </p>
+                                                <ul class="mb-3">
+                                                    <li><strong>10 bureaux privatifs</strong> de 15 à 30 m²</li>
+                                                    <li><strong>Zone coworking :</strong> 8 postes collaboratifs</li>
+                                                    <li><strong>Équipements :</strong> Fibre 1 Gb/s, impression couleur,
+                                                        salle de réunion</li>
+                                                    <li><strong>Accès :</strong> 24 h/24, badge et vidéosurveillance
+                                                    </li>
+                                                </ul>
+                                                <div class="d-grid gap-2 d-md-flex">
+                                                    <a href="bureaux.html" class="btn btn-patrimoine flex-fill">>Voir
+                                                        les détails</a>
+                                                    <a href="contact.html"
+                                                        class="btn btn-outline-patrimoine flex-fill">Demander un
+                                                        devis</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Salles -->
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#salles" aria-expanded="false" aria-controls="salles">
+                                        <i class="bi bi-door-open-fill me-3" aria-hidden="true"></i>Les Salles
+                                    </button>
+                                </h3>
+                                <div id="salles" class="accordion-collapse collapse" data-bs-parent="#espacesAccordion">
+                                    <div class="accordion-body">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <img src="images/Salle.jpg"
+                                                    alt="Salle de réception modulable Maison Mère"
+                                                    class="img-fluid rounded mb-3">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h4>Salles de réception et de séminaire</h4>
+                                                <p>
+                                                    Plusieurs salles polyvalentes dans un cadre patrimonial, adaptées
+                                                    pour vos réunions d’affaires, ateliers, formations, ou événements
+                                                    culturels.
+                                                </p>
+                                                <ul class="mb-3">
+                                                    <li><strong>3 salles modulables</strong>, de 40 à 150 m²</li>
+                                                    <li><strong>Capacité :</strong> 20 jusqu’à 120 personnes</li>
+                                                    <li><strong>Équipements :</strong> Vidéoprojecteur, sono, lumière
+                                                        réglable</li>
+                                                    <li><strong>Services :</strong> Restauration, accueil, logistique
+                                                        technique</li>
+                                                </ul>
+                                                <div class="d-grid gap-2 d-md-flex">
+                                                    <a href="salles.html" class="btn btn-patrimoine flex-fill">>Voir
+                                                        les détails</a>
+                                                    <a href="contact.html"
+                                                        class="btn btn-outline-patrimoine flex-fill">Demander un
+                                                        devis</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div> <!-- end accordion -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Section Tarifs -->
+        <section class="section-patrimoine bg-light" aria-labelledby="tarifs-title">
+            <div class="container">
+                <h2 id="tarifs-title" class="section-title text-center">Nos Tarifs</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card card-patrimoine text-center h-100">
+                            <div class="card-header bg-vert text-white">
+                                <h3 class="h5 mb-0">Chapelle</h3>
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">500$/jour</h4>
+                                <ul class="list-unstyled mb-4">
+                                    <li>✔ Cérémonies et mariages</li>
+                                    <li>✔ Concerts et représentations</li>
+                                    <li>✔ Événements culturels</li>
+                                    <li>✔ Orgue historique inclus</li>
+                                    <li>✔ 150 personnes maximum</li>
+                                </ul>
+                                <a href="contact.html" class="btn btn-patrimoine w-100">Réserver</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card card-patrimoine text-center h-100">
+                            <div class="card-header bg-vert text-white">
+                                <h3 class="h5 mb-0">Bureaux</h3>
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">300$/mois</h4>
+                                <ul class="list-unstyled mb-4">
+                                    <li>✔ Bureau privé meublé</li>
+                                    <li>✔ Fibre optique 1Gb/s</li>
+                                    <li>✔ Accès 24/7 sécurisé</li>
+                                    <li>✔ Espaces communs inclus</li>
+                                    <li>✔ Service de courrier</li>
+                                </ul>
+                                <a href="contact.html" class="btn btn-patrimoine w-100">Réserver</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card card-patrimoine text-center h-100">
+                            <div class="card-header bg-vert text-white">
+                                <h3 class="h5 mb-0">Salles</h3>
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">200$/jour</h4>
+                                <ul class="list-unstyled mb-4">
+                                    <li>✔ Équipement audiovisuel</li>
+                                    <li>✔ Configuration modulable</li>
+                                    <li>✔ Service catering optionnel</li>
+                                    <li>✔ Support technique inclus</li>
+                                    <li>✔ Jusqu'à 100 personnes</li>
+                                </ul>
+                                <a href="contact.html" class="btn btn-patrimoine w-100">Réserver</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
        
     </main>
 
