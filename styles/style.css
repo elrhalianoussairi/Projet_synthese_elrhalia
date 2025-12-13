@@ -1,5 +1,6 @@
 /* Import de la police Inter */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
 /* Variables CSS - Palette Maison Mère */
 :root {
     --noir: #1e1e1e;
@@ -12,10 +13,38 @@
     --beige: #c9b88c;
     --brun: #7a6a52;
     --bleu-gris: #aab9b9;
-    
+
     --ombre-legere: 0 4px 6px rgba(0, 0, 0, 0.1);
     --ombre-medium: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
 
+/* Reset et accessibilité */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:focus {
+    outline: 2px solid var(--vert);
+    outline-offset: 2px;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--vert);
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    z-index: 10000;
+    font-weight: 600;
+}
+
+.skip-link:focus {
+    top: 6px;
 }
 body {
     font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
