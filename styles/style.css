@@ -198,7 +198,24 @@ p {
     background-color: var(--vert);
 }
 
+/* Tableaux */
+.table {
+    background-color: var(--blanc);
+    color: var(--noir);
+    border: 1px solid var(--gris-clair);
+}
+
+.table-hover tbody tr:hover {
+    background-color: var(--gris-clair);
+}
+
+.table-dark {
+    background-color: var(--gris-fonce);
+    color: var(--blanc);
+}
+
 /* Formulaire */
+
 .form-control {
     border: 1px solid var(--gris-clair);
     border-radius: 4px;
