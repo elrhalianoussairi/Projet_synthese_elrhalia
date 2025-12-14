@@ -1,69 +1,262 @@
+/* ======== RESPONSIVE */
+
+/* ===============================
+   TABLETTE & PETITS ÉCRANS (≤ 992px)
+   =============================== */
+@media (max-width: 992px) {
+    .hero-section {
+        padding: 80px 0;
+        background-attachment: scroll;
+    }
+
+    .section-patrimoine {
+        padding: 60px 0;
+    }
+
+    .footer-section {
+        margin-bottom: 30px;
+    }
+
+    .partenaires-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .carousel-image {
+        height: 350px;
+    }
+}
+
+/* ===============================
+   TABLETTE / MOBILE (≤ 768px)
+   =============================== */
 @media (max-width: 768px) {
     body {
         padding-top: 56px;
+        position: relative;
+        overflow-x: hidden;
     }
-    
+
+    html {
+        -webkit-text-size-adjust: 100%;
+    }
+
+    /* Navigation */
+    .navbar-brand {
+        font-size: 1.3rem;
+    }
+
+    .navbar-brand .bi-house-door-fill {
+        font-size: 1.4rem;
+    }
+
+    /* Hero */
     .hero-section {
         padding: 60px 0;
     }
-    
+
     .hero-section h1 {
-        font-size: 2rem;
+        font-size: 48px;
     }
-    
-    
-    
+
+    /* Titres */
+    h2 { font-size: 28px; }
+    h3 { font-size: 22px; }
+    h4 { font-size: 18px; }
+
+    .section-title {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    /* Boutons */
+    .btn-patrimoine {
+        padding: 10px 24px;
+        font-size: 0.9rem;
+    }
+
+    /* Footer */
     .footer-patrimoine {
         padding: 40px 0 0;
     }
-    
+
     .footer-section {
         text-align: center;
-        margin-bottom: 30px;
     }
-    
+
     .footer-title {
         display: block;
         text-align: center;
     }
-    
+
     .footer-title::after {
         left: 50%;
         transform: translateX(-50%);
         width: 90%;
     }
-    
+
+    .footer-links li:hover {
+        padding-left: 0;
+    }
+
     .footer-links li::before {
         left: 50%;
         transform: translateX(-50%) translateY(-50%);
     }
-    
-    .footer-links li:hover {
-        padding-left: 0;
-    }
-    
-    .social-links {
-        justify-content: center;
-    }
-    
+
+    .social-links,
     .partenaires-logos {
         justify-content: center;
     }
-    
+
     .newsletter-form {
         flex-direction: column;
-        gap: 10px;
     }
-    
+
     .footer-legal {
         flex-direction: column;
         gap: 10px;
-        text-align: center;
     }
-    
+
+    /* Carousel */
+    .carousel-image {
+        height: 300px;
+    }
+
+    .carousel-presentation .carousel-control-prev,
+    .carousel-presentation .carousel-control-next {
+        width: 40px;
+        height: 40px;
+        margin: 0 10px;
+    }
+
+    .carousel-presentation .carousel-indicators {
+        bottom: -40px;
+    }
+
     .partenaires-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
     }
 }
 
+/* ===============================
+   MOBILE (≤ 576px)
+   =============================== */
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 40px 0;
+    }
+
+    .hero-section h1 { font-size: 36px; }
+    h2 { font-size: 24px; }
+    h3 { font-size: 20px; }
+    h4 { font-size: 18px; }
+
+    .hero-section .lead {
+        font-size: 1rem;
+    }
+
+    .section-patrimoine {
+        padding: 40px 0;
+    }
+
+    .btn-patrimoine {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .card-patrimoine {
+        margin-bottom: 20px;
+    }
+
+    .footer-bottom .col-md-6 {
+        margin-bottom: 15px;
+    }
+
+    .partenaires-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .partenaire-logo {
+        max-width: 50px;
+    }
+}
+
+/* ===============================
+   TRÈS PETITS ÉCRANS (≤ 400px)
+   =============================== */
+@media (max-width: 400px) {
+    .hero-section h1 { font-size: 1.3rem; }
+    .section-title { font-size: 1.3rem; }
+
+    .social-link {
+        width: 36px;
+        height: 36px;
+    }
+
+    .btn-patrimoine {
+        font-size: 0.85rem;
+        padding: 8px 20px;
+    }
+}
+
+/* ===============================
+   MODE PAYSAGE MOBILE
+   =============================== */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero-section {
+        padding: 40px 0;
+        min-height: auto;
+    }
+}
+
+/* ===============================
+   IMPRESSION
+   =============================== */
+@media print {
+    .navbar,
+    .footer-patrimoine,
+    .btn,
+    .social-links,
+    .newsletter-form,
+    .partenaires-section {
+        display: none !important;
+    }
+
+    body {
+        background: #fff !important;
+        color: #000 !important;
+        padding-top: 0 !important;
+        font-size: 12pt;
+    }
+
+    a[href^="#"]::after { content: ""; }
+}
+
+/* ===============================
+   ACCESSIBILITÉ
+   =============================== */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+@media (prefers-contrast: high) {
+    :root {
+        --noir: #000;
+        --blanc: #fff;
+        --vert: #006400;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .btn-patrimoine:focus-visible,
+    .social-link:focus-visible,
+    .accordion-button:focus-visible {
+        outline: 3px solid var(--vert);
+        outline-offset: 2px;
+    }
+}
