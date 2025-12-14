@@ -1,6 +1,3 @@
-/* Import de la police Inter */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
-
 /* Variables CSS - Palette Maison Mère */
 :root {
     --noir: #1e1e1e;
@@ -46,6 +43,8 @@
 .skip-link:focus {
     top: 6px;
 }
+
+/* Styles généraux */
 body {
     font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
     font-weight: 400; /* Regular */
@@ -94,9 +93,23 @@ p {
     font-size: 20px;
     line-height: 1.6;
     margin-bottom: 1rem;
-   
     color: var(--noir);
 }
+
+/* Classe utilitaire pour les paragraphes spécifiques */
+.paragraph-large {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400; /* Regular */
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Classes utilitaires pour les poids de police */
+.font-regular { font-weight: 400; }
+.font-bold { font-weight: 700; }
+.font-black { font-weight: 900; }
+
 /* Navigation */
 .navbar {
     background-color: var(--gris-fonce);
@@ -140,6 +153,7 @@ p {
 .navbar-brand .d-inline.d-sm-none {
     font-size: 1.4rem;
 }
+
 /* Boutons */
 .btn-patrimoine {
     background-color: var(--vert);
@@ -178,44 +192,7 @@ p {
     color: var(--blanc);
 }
 
-/* Carousel */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: var(--vert);
-    border-radius: 50%;
-    padding: 12px;
-}
-
-.carousel-indicators button {
-    background-color: var(--gris-moyen);
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    margin: 0 4px;
-}
-
-.carousel-indicators button.active {
-    background-color: var(--vert);
-}
-
-/* Tableaux */
-.table {
-    background-color: var(--blanc);
-    color: var(--noir);
-    border: 1px solid var(--gris-clair);
-}
-
-.table-hover tbody tr:hover {
-    background-color: var(--gris-clair);
-}
-
-.table-dark {
-    background-color: var(--gris-fonce);
-    color: var(--blanc);
-}
-
 /* Formulaire */
-
 .form-control {
     border: 1px solid var(--gris-clair);
     border-radius: 4px;
@@ -240,8 +217,75 @@ p {
     border-color: var(--vert);
     box-shadow: 0 0 0 0.2rem rgba(24, 97, 42, 0.25);
 }
-/* ===== FOOTER ===== */
 
+/* Badges */
+.badge-patrimoine {
+    background-color: var(--vert);
+    color: var(--blanc);
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+/* Tableaux */
+.table {
+    background-color: var(--blanc);
+    color: var(--noir);
+    border: 1px solid var(--gris-clair);
+}
+
+.table-hover tbody tr:hover {
+    background-color: var(--gris-clair);
+}
+
+.table-dark {
+    background-color: var(--gris-fonce);
+    color: var(--blanc);
+}
+
+/* Carousel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--vert);
+    border-radius: 50%;
+    padding: 12px;
+}
+
+.carousel-indicators button {
+    background-color: var(--gris-moyen);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 4px;
+}
+
+.carousel-indicators button.active {
+    background-color: var(--vert);
+}
+
+/* Fil d'Ariane */
+.breadcrumb {
+    background-color: transparent;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+}
+
+.breadcrumb-item a {
+    color: var(--noir);
+    text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+    color: var(--vert);
+    text-decoration: underline;
+}
+
+.breadcrumb-item.active {
+    color: var(--vert);
+    font-weight: 500;
+}
+
+/* ===== FOOTER ===== */
 .footer-patrimoine {
     background-color: var(--gris-fonce);
     color: var(--blanc);
@@ -253,6 +297,7 @@ p {
     margin-bottom: 30px;
     position: relative;
 }
+
 /* Styles pour les titres avec traits verts */
 .footer-title {
     color: var(--blanc);
@@ -263,11 +308,10 @@ p {
     text-transform: uppercase;
     font-size: 1.1rem;
     display: inline-block;
-    width: 65%;
+    width: auto;
 }
 
 .footer-title::after {
-      color: var(--blanc);
     content: '';
     position: absolute;
     bottom: 0;
@@ -276,6 +320,115 @@ p {
     height: 4px;
     background-color: var(--vert);
     border-radius: 2px;
+}
+
+/* Liens du footer */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 0;
+    transition: padding-left 0.3s ease;
+}
+
+.footer-links li:hover {
+    padding-left: 8px;
+}
+
+.footer-links li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 1px;
+    background-color: var(--vert);
+    transition: width 0.3s ease;
+}
+
+.footer-links li:hover::before {
+    width: 6px;
+}
+
+.footer-links a {
+    color: var(--gris-clair);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: inline-block;
+    padding: 2px 0;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+    color: var(--beige);
+    text-decoration: underline;
+}
+
+/* Contact dans le footer */
+.footer-contact p {
+    margin-bottom: 10px;
+    color: var(--gris-clair);
+    line-height: 1.5;
+}
+
+/* Partenaires dans le footer */
+.partenaires-mini {
+    margin-top: 10px;
+}
+
+.partenaires-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+}
+
+.partenaire-logo {
+    max-width: 60px;
+    height: auto;
+    transition: transform 0.3s ease;
+    border-radius: 4px;
+}
+
+.partenaire-logo:hover {
+    transform: scale(1.1);
+}
+
+/* Réseaux sociaux */
+.social-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background-color: var(--gris-moyen);
+    color: var(--blanc);
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.social-link:hover,
+.social-link:focus {
+    background-color: var(--beige);
+    color: var(--blanc);
+    transform: translateY(-3px);
+    border-color: var(--beige);
 }
 
 /* Bas du footer */
@@ -324,30 +477,6 @@ p {
     border-color: var(--vert);
     background-color: var(--gris-fonce);
 }
-/* Partenaires dans le footer */
-.partenaires-mini {
-    margin-top: 10px;
-}
-
-.partenaires-logos {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 15px;
-}
-
-.partenaire-logo {
-    max-width: 60px;
-    height: auto;
-    transition: transform 0.3s ease;
-    border-radius: 4px;
-}
-
-.partenaire-logo:hover {
-    transform: scale(1.1);
-}
 
 /* Liens légaux */
 .footer-legal {
@@ -371,4 +500,74 @@ p {
     text-decoration: underline;
 }
 
+/* Utilitaires */
+.bg-vert {
+    background-color: var(--vert) !important;
+}
 
+.text-vert {
+    color: var(--vert) !important;
+}
+
+.border-vert {
+    border-color: var(--vert) !important;
+}
+
+.bg-beige {
+    background-color: var(--beige) !important;
+}
+
+.text-beige {
+    color: var(--beige) !important;
+}
+
+.bg-brun {
+    background-color: var(--brun) !important;
+}
+
+.text-brun {
+    color: var(--brun) !important;
+}
+
+.bg-bleu-gris {
+    background-color: var(--bleu-gris) !important;
+}
+
+.text-bleu-gris {
+    color: var(--bleu-gris) !important;
+}
+
+.bg-gris-fonce {
+    background-color: var(--gris-fonce) !important;
+}
+
+.text-gris-fonce {
+    color: var(--gris-fonce) !important;
+}
+
+/* Accessibilité */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Images responsives */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.rounded {
+    border-radius: 8px !important;
+}
+
+.shadow {
+    box-shadow: var(--ombre-legere) !important;
+}
