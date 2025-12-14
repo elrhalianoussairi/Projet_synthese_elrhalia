@@ -4,17 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Maison Mère Baie-Saint-Paul</title>
+    <title>Contact- Maison Mère Baie-Saint-Paul</title>
     <meta name="description"
         content="Maison Mère Baie-Saint-Paul — Un lieu patrimonial d'exception où histoire, culture et innovation se rencontrent au cœur de Charlevoix.">
     <!-- Google Fonts : Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/responsive.css">
     <link rel="stylesheet" href="styles/contenu.css">
@@ -22,13 +20,16 @@
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html" aria-label="Maison Mère - Retour à l'accueil">
                 <i class="bi bi-house-door-fill me-2 d-none d-sm-inline" aria-hidden="true"></i>
+                <i class="bi bi-house-door-fill me-1 d-inline d-sm-none" aria-hidden="true"></i>
                 <span class="d-none d-md-inline">Maison Mère</span>
+                <span class="d-inline d-md-none">M. Mère</span>
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -38,11 +39,11 @@
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html" aria-current="page">Accueil</a>
-                    </li>
+                     <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
                     <li class="nav-item"><a class="nav-link" href="apropos.html">À propos</a></li>
                     <li class="nav-item"><a class="nav-link" href="espaces.html">Espaces à louer</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                   <li class="nav-item"><a class="nav-link active" href="contact.html" aria-current="page">Contact</a></li>
+                    
                 </ul>
             </div>
         </div>
@@ -63,343 +64,361 @@
         </div>
     </section>
 
-
-    <!-- Contenu principal -->
     <main id="main-content">
+    
 
-        <!-- Section Contact -->
-        <section class="section-patrimoine" aria-labelledby="contact-title">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <h2 id="contact-title" class="section-title text-center">Prenez Rendez-vous</h2>
-                        <p class="text-center mb-5">
-                            Que ce soit pour une visite, une location d'espace ou une simple question, n'hésitez pas à
-                            nous
-                            contacter. Notre équipe vous répondra dans les plus brefs délais.
-                        </p>
+        <!-- Contenu principal -->
+        <main id="main-content">
 
-                        <!-- Formulaire de Contact -->
-                        <form id="contactForm" class="needs-validation" aria-labelledby="contact-title">
-
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label for="nom" class="form-label">Nom *</label>
-                                    <input type="text" class="form-control" id="nom" required pattern=".{2,}"
-                                        oninput="this.classList.toggle('is-invalid', !this.checkValidity())">
-                                    <div class="invalid-feedback">
-                                        Veuillez renseigner votre nom (au moins 2 caractères).
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6 mb-3">
-                                    <label for="prenom" class="form-label">Prénom *</label>
-                                    <input type="text" class="form-control" id="prenom" required pattern=".{2,}"
-                                        oninput="this.classList.toggle('is-invalid', !this.checkValidity())">
-                                    <div class="invalid-feedback">
-                                        Veuillez renseigner votre prénom (au moins 2 caractères).
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label for="email" class="form-label">Email *</label>
-                                    <input type="email" class="form-control" id="email" required
-                                        oninput="this.classList.toggle('is-invalid', !this.checkValidity())">
-                                    <div class="invalid-feedback">
-                                        Veuillez renseigner un email valide.
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6 mb-3">
-                                    <label for="telephone" class="form-label">Téléphone</label>
-                                    <input type="tel" class="form-control" id="telephone"
-                                        pattern="[0-9\s\-\.\(\)]{10,}|^$"
-                                        oninput="this.classList.toggle('is-invalid', !this.checkValidity())"
-                                        aria-describedby="telephoneHelp">
-                                    <div id="telephoneHelp" class="form-text">
-                                        Facultatif, mais recommandé pour un contact rapide
-                                    </div>
-                                    <div class="invalid-feedback">
-                                        Veuillez renseigner un numéro de téléphone valide (10 chiffres minimum).
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="sujet" class="form-label">Sujet *</label>
-                                <select class="form-select" id="sujet" required
-                                    onchange="this.classList.toggle('is-invalid', !this.checkValidity())">
-                                    <option value="">Choisissez un sujet</option>
-                                    <option value="visite">Visite du patrimoine</option>
-                                    <option value="location-chapelle">Location chapelle</option>
-                                    <option value="location-bureaux">Location bureaux</option>
-                                    <option value="location-salles">Location salles</option>
-                                    <option value="evenement">Organisation d'événement</option>
-                                    <option value="partenariat">Demande de partenariat</option>
-                                    <option value="autre">Autre demande</option>
-                                </select>
-                                <div class="invalid-feedback">
-                                    Veuillez sélectionner un sujet.
-                                </div>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="message" class="form-label">Message *</label>
-                                <textarea class="form-control" id="message" rows="5" required pattern=".{10,}"
-                                    oninput="this.classList.toggle('is-invalid', !this.checkValidity())"
-                                    placeholder="Décrivez-nous votre projet ou votre demande..."></textarea>
-                                <div class="invalid-feedback">
-                                    Veuillez écrire votre message (au moins 10 caractères).
-                                </div>
-                            </div>
-
-                            <div class="mb-3 form-check">
-                                <input type="checkbox" class="form-check-input" id="newsletter">
-                                <label class="form-check-label" for="newsletter">
-                                    Je souhaite m'abonner à la newsletter de Maison Mère
-                                </label>
-                            </div>
-
-                            <div class="d-grid">
-                                <button type="submit" class="btn btn-patrimoine btn-lg">
-                                    Envoyer le message
-                                </button>
-                            </div>
-
-                        </form>
-
-
-
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Section Informations -->
-        <section class="section-patrimoine bg-light" aria-labelledby="infos-title">
-            <div class="container">
-                <h2 id="infos-title" class="section-title text-center">Nos Coordonnées</h2>
-                <div class="row">
-                    <div class="col-lg-4 mb-4">
-                        <div class="card card-patrimoine text-center h-100">
-                            <div class="card-body">
-                                <i class="bi bi-geo-alt display-4 text-beige" aria-hidden="true"></i>
-                                <h3 class="h5">Adresse</h3>
-                                <p>63, rue Ambroise-Fafard,<br> Baie-Saint-Paul (Québec) G3Z 2J7</p>
-                                <a href="#" class="btn btn-outline-patrimoine btn-sm">Voir sur la carte</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 mb-4">
-                        <div class="card card-patrimoine text-center h-100">
-                            <div class="card-body">
-                                <i class="bi bi-telephone display-4 text-beige" aria-hidden="true"></i>
-                                <h3 class="h5">Téléphone</h3>
-                                <p>418 435-6833<br>Lun-Ven: 8h-17h</p>
-                                <a href="tel:418 435 6833" class="btn btn-outline-patrimoine btn-sm">Nous appeler</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 mb-4">
-                        <div class="card card-patrimoine text-center h-100">
-                            <div class="card-body">
-                                <i class="bi bi-envelope display-4 text-beige" aria-hidden="true"></i>
-                                <h3 class="h5">Email</h3>
-                                <p>info@maisonmere.ca<br>Réponse sous 24h</p>
-                                <a href="mailto:info@maisonmere.fr" class="btn btn-outline-patrimoine btn-sm">Nous
-                                    écrire</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Section Carte -->
-        <section class="section-patrimoine" aria-labelledby="carte-title">
-            <div class="container">
-                <h2 id="carte-title" class="section-title text-center">Nous Trouver</h2>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card card-patrimoine">
-                            <div class="card-body p-0">
-                                <!-- Carte Google Maps intégrée -->
-                                <div class="ratio ratio-16x9">
-                                    <iframe
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2721.143236119892!2d-70.49868052368766!3d47.44235067117519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cbebd62f476b3d9%3A0x3b2a99a2e52768d!2sMaison%20M%C3%A8re%20Baie-Saint-Paul!5e0!3m2!1sfr!2sca!4v1731439479137!5m2!1sfr!2sca"
-                                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                                        title="Carte - Maison Mère Baie-Saint-Paul">
-                                    </iframe>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Section FAQ -->
-        <section class="section-patrimoine bg-light" aria-labelledby="faq-title">
-            <div class="container">
-                <h2 id="faq-title" class="section-title text-center">Questions Fréquentes</h2>
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <div class="accordion" id="faqAccordeon">
-                            <div class="accordion-item">
-                                <h3 class="accordion-header">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
-                                        Quels sont les horaires d'ouverture pour les visites ?
-                                    </button>
-                                </h3>
-                                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordeon">
-                                    <div class="accordion-body">
-                                        Maison Mère est ouverte du mardi au dimanche, de 10h à 17h. Les visites guidées
-                                        ont lieu à 11h, 14h et 16h. Pour les locations d'espaces, nous sommes
-                                        disponibles du lundi au vendredi de 8h à 17h.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h3 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
-                                        Faut-il réserver pour visiter Maison Mère ?
-                                    </button>
-                                </h3>
-                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordeon">
-                                    <div class="accordion-body">
-                                        La réservation est recommandée pour les visites guidées et obligatoire pour les
-                                        groupes de plus de 10 personnes. Pour les visites libres, aucune réservation
-                                        n'est nécessaire aux horaires d'ouverture.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h3 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
-                                        Y a-t-il un parking sur place ?
-                                    </button>
-                                </h3>
-                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordeon">
-                                    <div class="accordion-body">
-                                        Oui, nous disposons d'un parking privé gratuit pour nos visiteurs et clients.
-                                        Des places PMR sont également disponibles. Le parking est accessible durant les
-                                        horaires d'ouverture.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h3 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
-                                        Quel est le délai pour une réponse à une demande de location ?
-                                    </button>
-                                </h3>
-                                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordeon">
-                                    <div class="accordion-body">
-                                        Nous nous engageons à répondre à toutes les demandes de location sous 24 heures
-                                        ouvrées. Pour les demandes urgentes, n'hésitez pas à nous appeler directement au
-                                        418 435 6338.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-
-    <!-- Footer -->
-
-    <footer class="footer-patrimoine">
-        <div class="container">
-            <div class="row">
-                <!-- Colonne 1 - Navigation -->
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="footer-section">
-                        <h5 class="footer-title">Navigation</h5>
-                        <ul class="footer-links">
-                            <li><a href="index.html">Accueil</a></li>
-                            <li><a href="apropos.html">À propos</a></li>
-                            <li><a href="espaces.html">Espaces à louer</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Colonne 2 - Partenaires -->
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="footer-section">
-                        <h5 class="footer-title">Partenaires</h5>
-                        <div class="partenaires-mini">
-                            <div class="partenaires-logos">
-                                <img src="images/logo1.png" alt="Partenaire Culture" class="partenaire-logo">
-                                <img src="images/logo2.png" alt="Partenaire Patrimoine" class="partenaire-logo">
-                                <img src="images/logo3.jpg" alt="Partenaire Événementiel" class="partenaire-logo">
-                            </div>
-                            <a href="#" class="btn btn-outline-patrimoine btn-sm mt-3 d-inline-block">Tous nos
-                                partenaires</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Colonne 3 - Contact -->
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="footer-section">
-                        <h5 class="footer-title">Contact</h5>
-                        <div class="footer-contact">
-                            <p>📍 63, rue Ambroise-Fafard<br>Baie-Saint-Paul (Québec) G3Z 2J7</p>
-                            <p>📞 418 435-6833</p>
-                            <p>✉️ info@maisonmere.ca</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Colonne 4 - Réseaux sociaux & Newsletter -->
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="footer-section">
-                        <h5 class="footer-title">Suivez-nous</h5>
-
-                        <!-- Réseaux sociaux -->
-                        <div class="social-links">
-                            <a href="https://www.facebook.com/maisonmerebsp" class="social-link" aria-label="Facebook"
-                                target="_blank">
-                                <i class="bi bi-facebook"></i>
-                            </a>
-                            <a href="https://www.instagram.com/maisonmerebsp" class="social-link" aria-label="Instagram"
-                                target="_blank">
-                                <i class="bi bi-instagram"></i>
-                            </a>
-
-                        </div>
-
-                        <!-- Newsletter -->
-                        <div class="newsletter mt-4">
-                            <h6 class="footer-subtitle">Newsletter</h6>
-                            <p class="small">Recevez nos actualités</p>
-                            <form class="newsletter-form mt-2">
-                                <input type="email" class="newsletter-input" placeholder="Votre email" required>
-                                <button type="submit" class="btn btn-patrimoine btn-sm">OK</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Bas du footer -->
-            <div class="footer-bottom">
+            <!-- Section Contact -->
+            <section class="section-patrimoine" aria-labelledby="contact-title">
                 <div class="container">
-                    <div class="footer-bottom-content">
-                        <p class="mb-0">&copy; 2025 Maison Mère Baie-Saint-Paul Tous droits réservés.</p>
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <h2 id="contact-title" class="section-title text-center">Prenez Rendez-vous</h2>
+                            <p class="text-center mb-5">
+                                Que ce soit pour une visite, une location d'espace ou une simple question, n'hésitez pas
+                                à
+                                nous
+                                contacter. Notre équipe vous répondra dans les plus brefs délais.
+                            </p>
+
+                            <!-- Formulaire de Contact -->
+                            <form id="contactForm" class="needs-validation" aria-labelledby="contact-title">
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="nom" class="form-label">Nom *</label>
+                                        <input type="text" class="form-control" id="nom" required pattern=".{2,}"
+                                            oninput="this.classList.toggle('is-invalid', !this.checkValidity())">
+                                        <div class="invalid-feedback">
+                                            Veuillez renseigner votre nom (au moins 2 caractères).
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <label for="prenom" class="form-label">Prénom *</label>
+                                        <input type="text" class="form-control" id="prenom" required pattern=".{2,}"
+                                            oninput="this.classList.toggle('is-invalid', !this.checkValidity())">
+                                        <div class="invalid-feedback">
+                                            Veuillez renseigner votre prénom (au moins 2 caractères).
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="email" class="form-label">Email *</label>
+                                        <input type="email" class="form-control" id="email" required
+                                            oninput="this.classList.toggle('is-invalid', !this.checkValidity())">
+                                        <div class="invalid-feedback">
+                                            Veuillez renseigner un email valide.
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <label for="telephone" class="form-label">Téléphone</label>
+                                        <input type="tel" class="form-control" id="telephone"
+                                            pattern="[0-9\s\-\.\(\)]{10,}|^$"
+                                            oninput="this.classList.toggle('is-invalid', !this.checkValidity())"
+                                            aria-describedby="telephoneHelp">
+                                        <div id="telephoneHelp" class="form-text">
+                                            Facultatif, mais recommandé pour un contact rapide
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            Veuillez renseigner un numéro de téléphone valide (10 chiffres minimum).
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="sujet" class="form-label">Sujet *</label>
+                                    <select class="form-select" id="sujet" required
+                                        onchange="this.classList.toggle('is-invalid', !this.checkValidity())">
+                                        <option value="">Choisissez un sujet</option>
+                                        <option value="visite">Visite du patrimoine</option>
+                                        <option value="location-chapelle">Location chapelle</option>
+                                        <option value="location-bureaux">Location bureaux</option>
+                                        <option value="location-salles">Location salles</option>
+                                        <option value="evenement">Organisation d'événement</option>
+                                        <option value="partenariat">Demande de partenariat</option>
+                                        <option value="autre">Autre demande</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Veuillez sélectionner un sujet.
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Message *</label>
+                                    <textarea class="form-control" id="message" rows="5" required pattern=".{10,}"
+                                        oninput="this.classList.toggle('is-invalid', !this.checkValidity())"
+                                        placeholder="Décrivez-nous votre projet ou votre demande..."></textarea>
+                                    <div class="invalid-feedback">
+                                        Veuillez écrire votre message (au moins 10 caractères).
+                                    </div>
+                                </div>
+
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="newsletter">
+                                    <label class="form-check-label" for="newsletter">
+                                        Je souhaite m'abonner à la newsletter de Maison Mère
+                                    </label>
+                                </div>
+
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-patrimoine btn-lg">
+                                        Envoyer le message
+                                    </button>
+                                </div>
+
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Section Informations -->
+            <section class="section-patrimoine bg-light" aria-labelledby="infos-title">
+                <div class="container">
+                    <h2 id="infos-title" class="section-title text-center">Nos Coordonnées</h2>
+                    <div class="row">
+                        <div class="col-lg-4 mb-4">
+                            <div class="card card-patrimoine text-center h-100">
+                                <div class="card-body">
+                                    <i class="bi bi-geo-alt display-4 text-beige" aria-hidden="true"></i>
+                                    <h3 class="h5">Adresse</h3>
+                                    <p>63, rue Ambroise-Fafard,<br> Baie-Saint-Paul (Québec) G3Z 2J7</p>
+                                    <a href="#" class="btn btn-outline-patrimoine btn-sm">Voir sur la carte</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-4">
+                            <div class="card card-patrimoine text-center h-100">
+                                <div class="card-body">
+                                    <i class="bi bi-telephone display-4 text-beige" aria-hidden="true"></i>
+                                    <h3 class="h5">Téléphone</h3>
+                                    <p>418 435-6833<br>Lun-Ven: 8h-17h</p>
+                                    <a href="tel:418 435 6833" class="btn btn-outline-patrimoine btn-sm">Nous
+                                        appeler</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-4">
+                            <div class="card card-patrimoine text-center h-100">
+                                <div class="card-body">
+                                    <i class="bi bi-envelope display-4 text-beige" aria-hidden="true"></i>
+                                    <h3 class="h5">Email</h3>
+                                    <p>info@maisonmere.ca<br>Réponse sous 24h</p>
+                                    <a href="mailto:info@maisonmere.fr" class="btn btn-outline-patrimoine btn-sm">Nous
+                                        écrire</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Carte -->
+            <section class="section-patrimoine" aria-labelledby="carte-title">
+                <div class="container">
+                    <h2 id="carte-title" class="section-title text-center">Nous Trouver</h2>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card card-patrimoine">
+                                <div class="card-body p-0">
+                                    <!-- Carte Google Maps intégrée -->
+                                    <div class="ratio ratio-16x9">
+                                        <iframe
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2721.143236119892!2d-70.49868052368766!3d47.44235067117519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cbebd62f476b3d9%3A0x3b2a99a2e52768d!2sMaison%20M%C3%A8re%20Baie-Saint-Paul!5e0!3m2!1sfr!2sca!4v1731439479137!5m2!1sfr!2sca"
+                                            width="100%" height="450" style="border:0;" allowfullscreen=""
+                                            loading="lazy" title="Carte - Maison Mère Baie-Saint-Paul">
+                                        </iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section FAQ -->
+            <section class="section-patrimoine bg-light" aria-labelledby="faq-title">
+                <div class="container">
+                    <h2 id="faq-title" class="section-title text-center">Questions Fréquentes</h2>
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="accordion" id="faqAccordeon">
+                                <div class="accordion-item">
+                                    <h3 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                                            Quels sont les horaires d'ouverture pour les visites ?
+                                        </button>
+                                    </h3>
+                                    <div id="faq1" class="accordion-collapse collapse show"
+                                        data-bs-parent="#faqAccordeon">
+                                        <div class="accordion-body">
+                                            Maison Mère est ouverte du mardi au dimanche, de 10h à 17h. Les visites
+                                            guidées
+                                            ont lieu à 11h, 14h et 16h. Pour les locations d'espaces, nous sommes
+                                            disponibles du lundi au vendredi de 8h à 17h.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h3 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false"
+                                            aria-controls="faq2">
+                                            Faut-il réserver pour visiter Maison Mère ?
+                                        </button>
+                                    </h3>
+                                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordeon">
+                                        <div class="accordion-body">
+                                            La réservation est recommandée pour les visites guidées et obligatoire pour
+                                            les
+                                            groupes de plus de 10 personnes. Pour les visites libres, aucune réservation
+                                            n'est nécessaire aux horaires d'ouverture.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h3 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false"
+                                            aria-controls="faq3">
+                                            Y a-t-il un parking sur place ?
+                                        </button>
+                                    </h3>
+                                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordeon">
+                                        <div class="accordion-body">
+                                            Oui, nous disposons d'un parking privé gratuit pour nos visiteurs et
+                                            clients.
+                                            Des places PMR sont également disponibles. Le parking est accessible durant
+                                            les
+                                            horaires d'ouverture.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h3 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false"
+                                            aria-controls="faq4">
+                                            Quel est le délai pour une réponse à une demande de location ?
+                                        </button>
+                                    </h3>
+                                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordeon">
+                                        <div class="accordion-body">
+                                            Nous nous engageons à répondre à toutes les demandes de location sous 24
+                                            heures
+                                            ouvrées. Pour les demandes urgentes, n'hésitez pas à nous appeler
+                                            directement au
+                                            418 435 6338.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+
+        <!-- Footer-->
+        <footer class="footer-patrimoine">
+            <div class="container">
+                <div class="row">
+                    <!-- Colonne 1 - Navigation -->
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="footer-section">
+                            <h5 class="footer-title">Navigation</h5>
+                            <ul class="footer-links">
+                                <li><a href="index.html">Accueil</a></li>
+                                <li><a href="apropos.html">À propos</a></li>
+                                <li><a href="espaces.html">Espaces à louer</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Colonne 2 - Partenaires -->
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="footer-section">
+                            <h5 class="footer-title">Partenaires</h5>
+                            <div class="partenaires-mini">
+                                <div class="partenaires-logos">
+                                    <img src="images/logo1.png" alt="Partenaire Culture" class="partenaire-logo">
+                                    <img src="images/logo2.png" alt="Partenaire Patrimoine" class="partenaire-logo">
+                                    <img src="images/logo3.jpg" alt="Partenaire Événementiel" class="partenaire-logo">
+                                </div>
+                                <a href="#" class="btn btn-outline-patrimoine btn-sm mt-3 d-inline-block">Tous nos
+                                    partenaires</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Colonne 3 - Contact -->
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="footer-section">
+                            <h5 class="footer-title">Contact</h5>
+                            <div class="footer-contact">
+                                <p>📍 63, rue Ambroise-Fafard<br>Baie-Saint-Paul (Québec) G3Z 2J7</p>
+                                <p>📞 418 435-6833</p>
+                                <p>✉️ info@maisonmere.ca</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Colonne 4 - Réseaux sociaux & Newsletter -->
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="footer-section">
+                            <h5 class="footer-title">Suivez-nous</h5>
+
+                            <!-- Réseaux sociaux -->
+                            <div class="social-links">
+                                <a href="https://www.facebook.com/maisonmerebsp" class="social-link"
+                                    aria-label="Facebook" target="_blank">
+                                    <i class="bi bi-facebook"></i>
+                                </a>
+                                <a href="https://www.instagram.com/maisonmerebsp" class="social-link"
+                                    aria-label="Instagram" target="_blank">
+                                    <i class="bi bi-instagram"></i>
+                                </a>
+
+                            </div>
+
+                            <!-- Newsletter -->
+                            <div class="newsletter mt-4">
+                                <h6 class="footer-subtitle">Newsletter</h6>
+                                <h6 class="small">Recevez nos actualités</h6>
+                                <form class="newsletter-form mt-2">
+                                    <input type="email" class="newsletter-input" placeholder="Votre email" required>
+                                    <button type="submit" class="btn btn-patrimoine btn-sm">OK</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bas du footer -->
+                <div class="footer-bottom">
+                    <div class="container">
+                        <div class="footer-bottom-content">
+                            <p class="mb-0">&copy; 2025 Maison Mère Baie-Saint-Paul Tous droits réservés.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
