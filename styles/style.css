@@ -173,6 +173,9 @@ p {
 .navbar-brand .d-inline.d-sm-none {
     font-size: 1.4rem;
 }
+.hero-section .lead {
+    color: var(--blanc);
+}
 
 /* Boutons */
 .btn-patrimoine {
