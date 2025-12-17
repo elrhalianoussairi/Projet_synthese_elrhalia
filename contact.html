@@ -150,9 +150,10 @@
 
                             <div class="mb-3">
                                 <label for="message" class="form-label">Message *</label>
-                                <textarea class="form-control" id="message" rows="5" required pattern=".{10,}"
+                                <textarea class="form-control" id="message" rows="5" required minlength="10"
                                     oninput="this.classList.toggle('is-invalid', !this.checkValidity())"
                                     placeholder="Décrivez-nous votre projet ou votre demande..."></textarea>
+
                                 <div class="invalid-feedback">
                                     Veuillez écrire votre message (au moins 10 caractères).
                                 </div>
@@ -198,8 +199,10 @@
                                 <i class="bi bi-telephone display-4 text-beige" aria-hidden="true"></i>
                                 <h3 class="h5">Téléphone</h3>
                                 <p>418 435-6833<br>Lun-Ven: 8h-17h</p>
-                                <a href="tel:418 435 6833" class="btn btn-outline-patrimoine btn-sm">Nous
-                                    appeler</a>
+                                <a href="tel:4184356833" class="btn btn-outline-patrimoine btn-sm">
+                                    Nous appeler
+                                </a>
+
                             </div>
                         </div>
                     </div>
@@ -230,9 +233,10 @@
                                 <div class="ratio ratio-16x9">
                                     <iframe
                                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2721.143236119892!2d-70.49868052368766!3d47.44235067117519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cbebd62f476b3d9%3A0x3b2a99a2e52768d!2sMaison%20M%C3%A8re%20Baie-Saint-Paul!5e0!3m2!1sfr!2sca!4v1731439479137!5m2!1sfr!2sca"
-                                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                        style="border:0;" allowfullscreen loading="lazy"
                                         title="Carte - Maison Mère Baie-Saint-Paul">
                                     </iframe>
+
                                 </div>
                             </div>
                         </div>
@@ -393,9 +397,18 @@
                         <div class="newsletter mt-4">
                             <h6 class="small">Recevez nos actualités</h6>
                             <form class="newsletter-form mt-2">
-                                <input type="email" class="newsletter-input" placeholder="Votre email" required>
-                                <button type="submit" class="btn btn-patrimoine btn-sm">OK</button>
+                                <label for="newsletter-email" class="visually-hidden">
+                                    Adresse courriel
+                                </label>
+
+                                <input type="email" id="newsletter-email" class="newsletter-input"
+                                    placeholder="Votre email" required>
+
+                                <button type="submit" class="btn btn-patrimoine btn-sm">
+                                    OK
+                                </button>
                             </form>
+
                         </div>
                     </div>
                 </div>
